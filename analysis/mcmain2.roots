@@ -1,0 +1,17 @@
+&673c4	# gap entry, from pc=&67384 LR=&673c4
+# a span fill: sub pc, lr, r11, asr #3 (at &67384) back into 16 stmia words ending at &673c4 - each one an entry
+&67388
+&6738c
+&67390
+&67394
+&67398
+&6739c
+&673a0
+&673a4
+&673a8
+&673ac
+&673b0
+&673b4
+&673b8
+&673bc
+&673c0
