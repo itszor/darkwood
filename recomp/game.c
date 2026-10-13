@@ -115,6 +115,11 @@ static const struct roger_config config = {
      * or "Multisync" - GameModes' mode 49, 320x480 at 256 colours, which it
      * only defines for multisync and VGA monitors */
     .monitor_type = 1,
+    /* the game draws no pointer of its own and never turns the OS's on: it
+     * was started from the front end, a Wimp task, and the desktop's
+     * pointer stayed on through its mode change - the mouse works the
+     * title page's menu and the action buttons in the game */
+    .desktop_pointer = 1,
     .screen_size = 320 * 1024,                     /* two banks of mode 49 */
     .wimpslot = 1024 * 1024,                       /* !RunGame: WimpSlot 1024k */
     /* disc 1 as it is (the recipe's "raw"), for the copy protection: each

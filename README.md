@@ -54,7 +54,9 @@ mode 13, 320x256 (text over the view).
 Keys (from the freeware re-release's !Help): Z X turn, ' / walk forwards
 and backwards, Space fire, Return jump, P pause and in-game options,
 Ctrl-Escape quit to the title. The mouse works the menus and the action
-buttons at the bottom right. A controller: left/right turn, up/down walk,
+buttons at the bottom right; its pointer is the host's (the game draws
+none: it relied on the desktop's pointer staying on when it changed mode -
+libroger's desktop_pointer). A controller: left/right turn, up/down walk,
 A fire, B jump, X pause, back Escape.
 
 What runs
@@ -149,6 +151,7 @@ libroger:
   ADFS_DiscOp sector reads from an .hfe or .adf, ADFS_Retries, OS_FSControl
   14 and 20, OS_Module 18, FileCore and ADFS as ROM modules
 - roger_config.monitor_type, for Service_ModeExtension
+- roger_config.desktop_pointer: the desktop's pointer left on
 - the undefined instruction trap (OS_ChangeEnvironment 1's handler)
 - OS_ReadSysInfo 2 (the hardware: IOC, MEMC1, VIDC1)
 - overlays: the image loaded last at an address runs there (over another
