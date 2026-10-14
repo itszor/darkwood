@@ -103,7 +103,7 @@ static const struct roger_config config = {
     .pad_map = "left=Z,right=X,up=',down=/,a=Space,b=Return,x=P,back=Escape",
     /* MCMain1: load address &F49CC, execution address &F51DC (from the
      * disc's catalogue; the extracted name doesn't keep the latter) */
-    .image_path = "../game/!DarkWood/Disc1/Code/MCMain1,000f49cc-00000000",
+    .image_path = "../game/!DarkWood/Disc1/Code/MCMain1,000f49cc-000f51dc",
     .entry = 0xF51DC,
     .image = &recomp_image,
     .programs = programs,

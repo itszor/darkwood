@@ -17,8 +17,8 @@
 The game is one program in several files, which !RunGame's
 Code.MCMain1 loads with *Load and calls into (MCMain1 is the main loop):
   mcmain1     Code.MCMain1: the loader and main loop, loaded at &F49CC and
-              entered at &F51DC (its execution address, which the extracted
-              name lacks). The program image.
+              entered at &F51DC (its execution address, in the extracted
+              name too). The program image.
   mcmain2     Code.MCMain2 at &49C04: most of the game. Its first bytes are
               variables (DefaultVar and the saved game load over them) and
               &675F8 on is overwritten by a Gouraud overlay.

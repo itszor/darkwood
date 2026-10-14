@@ -78,7 +78,7 @@ Code.MCMain1. Here:
 - Front: not run (its options are command-line options; its "save game
   to a directory" isn't there - the game's own saving to !DarkSave is).
 - The game: MCMain1 (gen/mcmain1, loaded at &F49CC, entered at &F51DC -
-  its execution address, which the extracted name lost) *Loads MCMain2
+  its execution address, in the extracted name) *Loads MCMain2
   (&49C04, most of the game), DitGouraud or PlnGouraud at &675F8 (by
   graphics detail, over part of MCMain2), MCTitle or MCMap at &A807C,
   MCRoom (&B209C), MCLand (&E6680) and MCFinish (&EE07C, over MCLand) as
@@ -120,9 +120,7 @@ Known differences and open questions
   Ecklesfit village (a few minutes of it). Other parts of the game may
   reach code the analysis missed: it's interpreted (interpret_gaps), so
   it runs, more slowly; --trace-gaps logs it, then make roots, make regen,
-  make translate it. analysis/mcmain2.roots lists by hand the entries of
-  a span fill that jumps back into a run of stmias (sub pc, lr, r11, asr
-  #3 at &67384), a form SuperSpider doesn't follow.
+  make translate it.
 - The title page has no music (QTM is configured and stopped again); not
   checked against the original.
 - In headless runs, use --full-os for screenshots: without it libroger
@@ -168,6 +166,4 @@ To do
   a "plain disc" holding all six discs' files, with its own (de-protected)
   code files to translate and no floppy needed.
 - Shared changes held back for fear of breaking other games are listed in
-  $SS/PORTING.md, "Deferred": backward computed jumps (`sub pc, ...`;
-  here, the hand roots in analysis/mcmain2.roots), adf_extract.py's lost
-  execution addresses (here, MCMain1's entry in game.c), and the rest.
+  $SS/PORTING.md, "Deferred".
